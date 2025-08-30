@@ -1,5 +1,6 @@
 import "./App.css";
 import SongCard from "./components/SongCard";
+import Header from "./components/Header";
 
 const mockSongs = [
   {
@@ -42,10 +43,7 @@ const mockSongs = [
 function App() {
   return (
     <div className="min-h-screen bg-black p-5">
-      <header className="text-center mb-10 text-white">
-        <h1 className="text-4xl font-bold mb-2 drop-shadow-lg">Kodigo Music</h1>
-        <p className="text-lg opacity-90">Discover your favorite music across platforms</p>
-      </header>
+      <Header />
       <main className="max-w-3xl mx-auto">
         {mockSongs.map((song) => (
           <SongCard key={song.id} song={song} />
