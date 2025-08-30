@@ -1,10 +1,11 @@
+import "./HotTracks.css";
 import SongCard from "./SongCard";
 
 export default function HotTracks({ songs }) {
   return (
-    <div className="flex-3">
-      <h2 className="text-xl font-semibold text-white mb-4">Hot Tracks</h2>
-      <div className="overflow-hidden">
+    <div className="hot-tracks">
+      <h2 className="hot-tracks-title">Hot Tracks</h2>
+      <div className="hot-tracks-container">
         {songs.map((song) => (
           <SongCard key={song.id} song={song} />
         ))}

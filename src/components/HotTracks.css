@@ -1,0 +1,14 @@
+.hot-tracks {
+  flex: 3 1 0%;
+}
+
+.hot-tracks-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.hot-tracks-container {
+  overflow: hidden;
+}

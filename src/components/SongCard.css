@@ -1,0 +1,81 @@
+.song-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-top: 1px solid #374151;
+  border-bottom: 1px solid #374151;
+  transition: all 0.2s;
+  gap: 0.75rem;
+}
+
+.song-card:hover {
+  background-color: #111827;
+}
+
+.song-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0;
+}
+
+.song-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.25rem;
+  object-fit: cover;
+}
+
+.song-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.song-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+}
+
+.song-artist {
+  font-size: 0.875rem;
+  color: #d1d5db;
+  margin: 0;
+}
+
+.song-genre {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin: 0;
+}
+
+.song-platforms {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.platform-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.platform-icon:hover {
+  opacity: 1;
+}
+
+@media (max-width: 767px) {
+  .song-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .song-platforms {
+    align-self: flex-end;
+  }
+}
