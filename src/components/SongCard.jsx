@@ -1,9 +1,16 @@
 import "./SongCard.css";
+import { useNavigate } from "react-router-dom";
 import reactLogo from "../assets/react.svg";
 
 export default function SongCard({ song }) {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/song/${song.id}`);
+  };
+
   return (
-    <div className="song-card">
+    <div className="song-card" onClick={handleClick}>
       <div className="song-info">
         <img
           src={reactLogo}
