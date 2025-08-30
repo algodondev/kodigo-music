@@ -1,10 +1,57 @@
 import "./App.css";
+import SongCard from "./components/SongCard";
+
+const mockSongs = [
+  {
+    id: 1,
+    title: "Paranoid Android",
+    artist: "Radiohead",
+    genre: "Alternative Rock",
+    platforms: ["Spotify", "Apple Music", "Deezer"]
+  },
+  {
+    id: 2,
+    title: "Teardrop",
+    artist: "Portishead",
+    genre: "Trip Hop",
+    platforms: ["Spotify", "Apple Music"]
+  },
+  {
+    id: 3,
+    title: "Bloom",
+    artist: "Radiohead",
+    genre: "Electronic Rock",
+    platforms: ["Spotify", "Deezer", "YouTube Music"]
+  },
+  {
+    id: 4,
+    title: "Karma Police",
+    artist: "Radiohead",
+    genre: "Alternative Rock",
+    platforms: ["Spotify", "Apple Music", "Deezer", "YouTube Music"]
+  },
+  {
+    id: 5,
+    title: "Glory Box",
+    artist: "Portishead",
+    genre: "Trip Hop",
+    platforms: ["Spotify", "Apple Music"]
+  }
+];
 
 function App() {
   return (
-    <>
-      <h1 class="text-3xl text-yellow-400 font-bold">Hello world!</h1>
-    </>
+    <div className="app">
+      <header className="app-header">
+        <h1>Kodigo Music</h1>
+        <p>Discover your favorite music across platforms</p>
+      </header>
+      <main className="song-list">
+        {mockSongs.map((song) => (
+          <SongCard key={song.id} song={song} />
+        ))}
+      </main>
+    </div>
   );
 }
 
