@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -42,10 +43,19 @@ const mockSongs = [
 ];
 
 function App() {
+  const [showMobileSidebar, setShowMobileSidebar] = useState(false);
+
   return (
     <div className="min-h-screen bg-black p-5 flex flex-col">
-      <Header />
-      <Content songs={mockSongs} />
+      <Header 
+        onToggleSidebar={() => setShowMobileSidebar(!showMobileSidebar)}
+        showMobileFilter={true}
+      />
+      <Content 
+        songs={mockSongs}
+        showMobileSidebar={showMobileSidebar}
+        onToggleSidebar={() => setShowMobileSidebar(!showMobileSidebar)}
+      />
       <Footer />
     </div>
   );

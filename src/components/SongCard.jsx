@@ -2,7 +2,7 @@ import reactLogo from '../assets/react.svg'
 
 export default function SongCard({ song }) {
   return (
-    <div className="flex items-center justify-between p-4 bg-gray-900 border border-gray-700 rounded-lg mb-2 transition-all duration-200 hover:bg-gray-800 hover:border-gray-600 md:flex-row flex-col gap-3 md:gap-0">
+    <div className="flex items-center justify-between py-6 px-8 border-t border-b border-gray-700 transition-all duration-200 hover:bg-gray-900 md:flex-row flex-col gap-3 md:gap-0">
       <div className="flex items-center gap-3">
         <img 
           src={reactLogo} 
