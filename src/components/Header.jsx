@@ -1,6 +1,6 @@
 export default function Header({ onToggleSidebar, showMobileFilter = false }) {
   return (
-    <header className="flex items-center justify-between mb-10 text-white">
+    <header className="flex items-center justify-between mb-12 text-white">
       <h1 className="text-3xl font-bold">Kodigo Music</h1>
       <div className="flex items-center gap-4 flex-1 max-w-md mx-8">
         <input

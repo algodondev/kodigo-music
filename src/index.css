@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 * {
   margin: 0;
   padding: 0;
@@ -25,4 +27,8 @@ button {
   background: none;
   cursor: pointer;
   font-family: inherit;
+}
+
+.flex-3 {
+  flex: 3 1 0%;
 }

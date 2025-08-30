@@ -46,7 +46,7 @@ function App() {
   const [showMobileSidebar, setShowMobileSidebar] = useState(false);
 
   return (
-    <div className="min-h-screen bg-black p-5 flex flex-col">
+    <div className="min-h-screen bg-black px-6 py-8 flex flex-col">
       <Header
         onToggleSidebar={() => setShowMobileSidebar(!showMobileSidebar)}
         showMobileFilter={true}

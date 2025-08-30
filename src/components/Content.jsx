@@ -17,7 +17,7 @@ export default function Content({ songs, showMobileSidebar, onToggleSidebar }) {
 
   return (
     <div className="flex-1 mx-auto ">
-      <div className="flex gap-6 lg:flex-row flex-col">
+      <div className="flex gap-8 lg:flex-row flex-col">
         <HotTracks songs={filteredSongs} />
         <div
           className={`flex-1 lg:block ${
