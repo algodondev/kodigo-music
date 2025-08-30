@@ -1,9 +1,12 @@
 import "./Header.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Header({ onToggleSidebar, showMobileFilter = false }) {
+  const navigate = useNavigate();
+
   return (
     <header className="header">
-      <h1 className="header-title">Kodigo Music</h1>
+      <h1 className="header-title" onClick={() => navigate("/")}>Kodigo Music</h1>
       <div className="search-container">
         <input
           type="text"

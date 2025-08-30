@@ -1,0 +1,21 @@
+.content-container {
+  flex: 1;
+  padding: 0 10px;
+}
+
+.content-layout {
+  display: flex;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .content-layout {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 1023px) {
+  .content-layout {
+    flex-direction: column;
+  }
+}

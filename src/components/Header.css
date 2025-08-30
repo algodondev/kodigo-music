@@ -10,6 +10,12 @@
 .header-title {
   font-size: 1.875rem;
   font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.header-title:hover {
+  opacity: 0.8;
 }
 
 .search-container {

@@ -1,3 +1,4 @@
+import "./Content.css";
 import { useState, useMemo } from "react";
 import HotTracks from "./HotTracks";
 import Sidebar from "./Sidebar";
@@ -16,8 +17,8 @@ export default function Content({ songs, showMobileSidebar, onToggleSidebar }) {
   }, [songs, selectedGenre]);
 
   return (
-    <div className="flex-1 mx-auto ">
-      <div className="flex gap-8 lg:flex-row flex-col">
+    <div className="content-container">
+      <div className="content-layout">
         <HotTracks songs={filteredSongs} />
         <div
           className={`flex-1 lg:block ${
