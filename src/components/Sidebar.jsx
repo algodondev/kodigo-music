@@ -4,7 +4,17 @@ export default function Sidebar({ genres, selectedGenre, onGenreSelect }) {
   return (
     <div className="sidebar-container">
       <div className="sidebar">
-        <h3 className="sidebar-title">Filter songs by genre</h3>
+        <div className="sidebar-header">
+          <h3 className="sidebar-title">Filter songs by genre</h3>
+          {selectedGenre && (
+            <button
+              onClick={() => onGenreSelect(null)}
+              className="clear-filter-button"
+            >
+              Clear
+            </button>
+          )}
+        </div>
         <div className="genre-buttons">
           {genres.map((genre) => (
             <button
