@@ -8,6 +8,7 @@ import SingleSong from "./pages/SingleSong";
 
 function App() {
   const [showMobileSidebar, setShowMobileSidebar] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
 
   return (
     <Router>
@@ -15,6 +16,7 @@ function App() {
         <Header
           onToggleSidebar={() => setShowMobileSidebar(!showMobileSidebar)}
           showMobileFilter={true}
+          onSearch={setSearchTerm}
         />
         <Routes>
           <Route 
@@ -23,6 +25,7 @@ function App() {
               <Home 
                 showMobileSidebar={showMobileSidebar}
                 onToggleSidebar={() => setShowMobileSidebar(!showMobileSidebar)}
+                searchTerm={searchTerm}
               />
             } 
           />

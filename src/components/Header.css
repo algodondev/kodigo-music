@@ -27,6 +27,11 @@
   margin: 0 2rem;
 }
 
+.search-wrapper {
+  flex: 1;
+  position: relative;
+}
+
 .search-input {
   width: 100%;
   padding: 0.5rem 1rem;
@@ -43,6 +48,19 @@
 .search-input:focus {
   outline: none;
   border-color: #6b7280;
+}
+
+.search-input.search-error {
+  border-color: #ef4444;
+}
+
+.error-message {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  font-size: 0.75rem;
+  color: #ef4444;
+  margin-top: 0.25rem;
 }
 
 .filter-button {

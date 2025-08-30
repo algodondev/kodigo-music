@@ -62,6 +62,7 @@ export default function SingleSong() {
   const relatedSongs = mockSongs.filter(s => s.id !== parseInt(id) && s.artist === song?.artist);
   const moreSongs = mockSongs.filter(s => s.id !== parseInt(id) && s.artist !== song?.artist);
 
+
   if (!song) {
     return <div className="error-message">Song not found</div>;
   }

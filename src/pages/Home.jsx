@@ -38,10 +38,22 @@ const mockSongs = [
   },
 ];
 
-export default function Home({ showMobileSidebar, onToggleSidebar }) {
+import { useMemo } from "react";
+
+export default function Home({ showMobileSidebar, onToggleSidebar, searchTerm }) {
+  const filteredSongs = useMemo(() => {
+    if (!searchTerm) return mockSongs;
+    
+    return mockSongs.filter(song => 
+      song.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      song.artist.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      song.genre.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  }, [searchTerm]);
+
   return (
     <Content 
-      songs={mockSongs}
+      songs={filteredSongs}
       showMobileSidebar={showMobileSidebar}
       onToggleSidebar={onToggleSidebar}
     />
