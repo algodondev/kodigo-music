@@ -10,36 +10,36 @@ const mockSongs = [
     title: "Paranoid Android",
     artist: "Radiohead",
     genre: "Alternative Rock",
-    platforms: ["Spotify", "Apple Music", "Deezer"]
+    platforms: ["Spotify", "Apple Music", "Deezer"],
   },
   {
     id: 2,
     title: "Teardrop",
     artist: "Portishead",
     genre: "Trip Hop",
-    platforms: ["Spotify", "Apple Music"]
+    platforms: ["Spotify", "Apple Music"],
   },
   {
     id: 3,
     title: "Bloom",
     artist: "Radiohead",
     genre: "Electronic Rock",
-    platforms: ["Spotify", "Deezer", "YouTube Music"]
+    platforms: ["Spotify", "Deezer", "YouTube Music"],
   },
   {
     id: 4,
     title: "Karma Police",
     artist: "Radiohead",
     genre: "Alternative Rock",
-    platforms: ["Spotify", "Apple Music", "Deezer", "YouTube Music"]
+    platforms: ["Spotify", "Apple Music", "Deezer", "YouTube Music"],
   },
   {
     id: 5,
     title: "Glory Box",
     artist: "Portishead",
     genre: "Trip Hop",
-    platforms: ["Spotify", "Apple Music"]
-  }
+    platforms: ["Spotify", "Apple Music"],
+  },
 ];
 
 function App() {
@@ -47,11 +47,11 @@ function App() {
 
   return (
     <div className="min-h-screen bg-black p-5 flex flex-col">
-      <Header 
+      <Header
         onToggleSidebar={() => setShowMobileSidebar(!showMobileSidebar)}
         showMobileFilter={true}
       />
-      <Content 
+      <Content
         songs={mockSongs}
         showMobileSidebar={showMobileSidebar}
         onToggleSidebar={() => setShowMobileSidebar(!showMobileSidebar)}
