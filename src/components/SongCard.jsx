@@ -1,6 +1,10 @@
 import "./SongCard.css";
 import { useNavigate } from "react-router-dom";
-import reactLogo from "../assets/react.svg";
+import musicIcon from "../assets/music.svg";
+import spotifyIcon from "../assets/spotify.svg";
+import appleMusicIcon from "../assets/apple-music.svg";
+import deezerIcon from "../assets/deezer.svg";
+import youtubeMusicIcon from "../assets/youtube-music.svg";
 
 export default function SongCard({ song }) {
   const navigate = useNavigate();
@@ -13,7 +17,7 @@ export default function SongCard({ song }) {
     <div className="song-card" onClick={handleClick}>
       <div className="song-info">
         <img
-          src={reactLogo}
+          src={musicIcon}
           alt="Music icon"
           className="song-icon"
         />
@@ -24,15 +28,24 @@ export default function SongCard({ song }) {
         </div>
       </div>
       <div className="song-platforms">
-        {song.platforms.map((platform, index) => (
-          <img
-            key={index}
-            src={reactLogo}
-            alt={`${platform} platform`}
-            className="platform-icon"
-            title={platform}
-          />
-        ))}
+        {song.platforms.map((platform, index) => {
+          const platformIcons = {
+            "Spotify": spotifyIcon,
+            "Apple Music": appleMusicIcon,
+            "Deezer": deezerIcon,
+            "YouTube Music": youtubeMusicIcon
+          };
+          
+          return (
+            <img
+              key={index}
+              src={platformIcons[platform] || musicIcon}
+              alt={`${platform} platform`}
+              className="platform-icon"
+              title={platform}
+            />
+          );
+        })}
       </div>
     </div>
   );

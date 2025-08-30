@@ -1,6 +1,10 @@
 import "./SingleSong.css";
 import { useParams } from "react-router-dom";
-import reactLogo from "../assets/react.svg";
+import musicIcon from "../assets/music.svg";
+import spotifyIcon from "../assets/spotify.svg";
+import appleMusicIcon from "../assets/apple-music.svg";
+import deezerIcon from "../assets/deezer.svg";
+import youtubeMusicIcon from "../assets/youtube-music.svg";
 import SongCard from "../components/SongCard";
 
 const mockSongs = [
@@ -71,7 +75,7 @@ export default function SingleSong() {
     <div className="single-song-page">
       <div className="song-detail-card">
         <img 
-          src={reactLogo} 
+          src={musicIcon} 
           alt="Album cover"
           className="album-cover"
         />
@@ -87,15 +91,24 @@ export default function SingleSong() {
           <div className="platforms-container">
             <span className="platforms-label">Available on:</span>
             <div className="platforms-list">
-              {song.platforms.map((platform, index) => (
-                <img 
-                  key={index}
-                  src={reactLogo} 
-                  alt={`${platform} platform`}
-                  className="platform-icon-large"
-                  title={platform}
-                />
-              ))}
+              {song.platforms.map((platform, index) => {
+                const platformIcons = {
+                  "Spotify": spotifyIcon,
+                  "Apple Music": appleMusicIcon,
+                  "Deezer": deezerIcon,
+                  "YouTube Music": youtubeMusicIcon
+                };
+                
+                return (
+                  <img 
+                    key={index}
+                    src={platformIcons[platform] || musicIcon} 
+                    alt={`${platform} platform`}
+                    className="platform-icon-large"
+                    title={platform}
+                  />
+                );
+              })}
             </div>
           </div>
         </div>

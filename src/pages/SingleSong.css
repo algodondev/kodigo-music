@@ -19,6 +19,7 @@
   height: 12rem;
   border-radius: 0.5rem;
   object-fit: cover;
+  filter: brightness(0) invert(1);
 }
 
 .song-info-detail {
@@ -73,6 +74,7 @@
   height: 2rem;
   opacity: 0.8;
   transition: opacity 0.2s;
+  filter: brightness(0) invert(1);
 }
 
 .platform-icon-large:hover {
