@@ -1,6 +1,7 @@
 import "./App.css";
-import SongCard from "./components/SongCard";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Content from "./components/Content";
 
 const mockSongs = [
   {
@@ -42,13 +43,10 @@ const mockSongs = [
 
 function App() {
   return (
-    <div className="min-h-screen bg-black p-5">
+    <div className="min-h-screen bg-black p-5 flex flex-col">
       <Header />
-      <main className="max-w-3xl mx-auto">
-        {mockSongs.map((song) => (
-          <SongCard key={song.id} song={song} />
-        ))}
-      </main>
+      <Content songs={mockSongs} />
+      <Footer />
     </div>
   );
 }
